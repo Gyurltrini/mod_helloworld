@@ -5,7 +5,7 @@
 	client="site"
 	method="upgrade">
     <name>MOD_HELLOWORLD</name>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<creationDate>15-01-2021</creationDate><!-- dd-mm-yyy -->
 
     <author>Kathryn Anderson</author>
@@ -58,6 +58,12 @@
 		</schemas> 
 	</update>
 	<updateservers>
+		<server
+			type="extension"
+			priority="2"
+			name="Helloworld">
+			http://posappsvr3.mpu.gov.tt/joomla_ext/modules/hello_world/helloworld_update.xml
+		</server>
 		<server
 			type="extension"
 			priority="2"
