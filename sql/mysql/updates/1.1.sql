@@ -1,0 +1,1 @@
+INSERT INTO `#__helloworld` (`hello`, `lang`) VALUES ('Hallo Welt', 'de-DE');
