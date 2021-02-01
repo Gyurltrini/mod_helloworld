@@ -4,33 +4,32 @@
 	version="3.7"
 	client="site"
 	method="upgrade">
-    <name>MOD_HELLOWORLD</name>
+	<name>MOD_HELLOWORLD</name>
 	<version>1.0.3</version>
 	<creationDate>15-01-2021</creationDate><!-- dd-mm-yyy -->
-
-    <author>Kathryn Anderson</author>
-    <authorUrl>http://kathrynanderson.great-site.net/</authorUrl>
-    <authorEmail>kathryn.ma@gmail.com</authorEmail>
-    <description>MOD_HELLOWORLD_DESC</description>
+	<author>Kathryn Anderson</author>
+	<authorUrl>http://kathrynanderson.great-site.net/</authorUrl>
+	<authorEmail>kathryn.ma@gmail.com</authorEmail>
+	<description>MOD_HELLOWORLD_DESC</description>
 	<copyright>Kathryn Anderson (c) 2020. All rights reserved.</copyright>
 	<languages folder="language">
-        <language tag="en-GB">en-GB/en-GB.mod_helloworld.ini</language>
-        <language tag="en-GB">en-GB/en-GB.mod_helloworld.sys.ini</language>
-    </languages>
-    <files>
-        <filename>mod_helloworld.xml</filename>
-        <filename module="mod_helloworld">mod_helloworld.php</filename>
-        <filename>index.html</filename>
-        <filename>helper.php</filename>
-        <filename>tmpl/default.php</filename>
-        <filename>tmpl/index.html</filename>
+        	<language tag="en-GB">en-GB/en-GB.mod_helloworld.ini</language>
+        	<language tag="en-GB">en-GB/en-GB.mod_helloworld.sys.ini</language>
+	</languages>
+	<files>
+		<filename>mod_helloworld.xml</filename>
+		<filename module="mod_helloworld">mod_helloworld.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
 		<filename>sql/mysql/install.mysql.utf8.sql</filename>
-        <filename>sql/mysql/uninstall.mysql.utf8.sql</filename>
+		<filename>sql/mysql/uninstall.mysql.utf8.sql</filename>
 		<folder>sql</folder>
 		<folder>sql/mysql</folder>
 		<folder>sql/mysql/updates</folder>
-    </files>
-    <config>
+	</files>
+	<config>
 		<fields name="params">
 			<fieldset name="basic">
 				<field
@@ -41,7 +40,7 @@
 					   query="SELECT id AS value, lang FROM #__helloworld" />
 			</fieldset>
 		</fields>
-    </config>
+	</config>
 	<install>
 		 <sql>
 			 <file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
@@ -71,4 +70,5 @@
 			https://raw.githubusercontent.com/Gyurltrini/mod_helloworld/main/helloworld_update.xml
 		</server>
 	</updateservers>
+	<scriptfile>script.php</scriptfile
 </extension>
