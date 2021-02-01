@@ -50,6 +50,11 @@ class mod_helloWorldInstallerScript
 	function preflight($type, $parent) 
 	{
 		echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
+		//check if component <component name here> is installed and enabled
+		if (!JComponentHelper::getComponent('com_phocadownload', true)->enabled)
+		{
+			echo 'the phocadownload component is installed and enabled'.
+		}
 	}
 
 	/**
