@@ -12,6 +12,7 @@
 	<authorEmail>kathryn.ma@gmail.com</authorEmail>
 	<description>MOD_HELLOWORLD_DESC</description>
 	<copyright>Kathryn Anderson (c) 2020. All rights reserved.</copyright>
+	<scriptfile>script.php</scriptfile>
 	<languages folder="language">
         	<language tag="en-GB">en-GB/en-GB.mod_helloworld.ini</language>
         	<language tag="en-GB">en-GB/en-GB.mod_helloworld.sys.ini</language>
@@ -28,7 +29,6 @@
 		<folder>sql</folder>
 		<folder>sql/mysql</folder>
 		<folder>sql/mysql/updates</folder>
-		<scriptfile>script.php</scriptfile>
 	</files>
 	<config>
 		<fields name="params">
