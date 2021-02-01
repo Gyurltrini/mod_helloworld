@@ -70,5 +70,5 @@
 			https://raw.githubusercontent.com/Gyurltrini/mod_helloworld/main/helloworld_update.xml
 		</server>
 	</updateservers>
-	<scriptfile>script.php</scriptfile>
+	<!--<scriptfile>script.php</scriptfile>-->
 </extension>
