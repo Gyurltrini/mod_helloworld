@@ -53,6 +53,8 @@ class mod_helloWorldInstallerScript
 		//check if component <component name here> is installed and enabled
 		if (!JComponentHelper::getComponent('com_phocadownload', true)->enabled)
 		{
+			echo 'the phocadownload component is not installed and enabled';
+		}else{
 			echo 'the phocadownload component is installed and enabled';
 		}
 	}
