@@ -28,6 +28,7 @@
 		<folder>sql</folder>
 		<folder>sql/mysql</folder>
 		<folder>sql/mysql/updates</folder>
+		<scriptfile>script.php</scriptfile>
 	</files>
 	<config>
 		<fields name="params">
@@ -70,5 +71,4 @@
 			https://raw.githubusercontent.com/Gyurltrini/mod_helloworld/main/helloworld_update.xml
 		</server>
 	</updateservers>
-	<!--<scriptfile>script.php</scriptfile>-->
 </extension>
