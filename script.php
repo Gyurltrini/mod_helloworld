@@ -49,7 +49,18 @@ class mod_helloWorldInstallerScript
 	 */
 	function preflight($type, $parent) 
 	{
+		$jversion = new JVersion();
 		echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
+		//installing manifest file version
+		$this->release = $parent->get("manifest")->version;
+		
+		//compare manifest file minimum Joomla version
+		
+		//show essential information
+		
+		//abort if the current Joomla version is older
+		
+		//abort if the module version is not newer
 		if($type === 'install')
         	{
 			//check joomla version --- compatibility
