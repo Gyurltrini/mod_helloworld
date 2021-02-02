@@ -55,20 +55,33 @@ class mod_helloWorldInstallerScript
 		$this->release = $parent->get("manifest")->version;
 		
 		//compare manifest file minimum Joomla version
+		$this->minimum_joomla_release = $parent->get( "manifest" )->attributes()->version;
 		
 		//show essential information
+		echo '<p>'.$type.'ing module manifest file version = ' . $this->release;
+		echo '<br />Current manifest cache module version = ' . $this->getParam('version');
+		echo '<br />'.$type.'ing module manifest file minimum Joomla version = ' . $this->minimum_joomla_release;
+		echo '<br />Current Joomla version = ' . $jversion->getShortVersion();
 		
 		//abort if the current Joomla version is older
+		if( version_compare( $jversion->getShortVersion(), $this->minimum_joomla_release, 'lt' ) ) {
+			Jerror::raiseWarning(null, 'Cannot install com_democompupdate in a Joomla release prior to '.$this->minimum_joomla_release);
+			return false;
+		}
 		
 		//abort if the module version is not newer
+		if ( $type == 'update' ) {
+			$oldRelease = $this->getParam('version');
+			$rel = $oldRelease . ' to ' . $this->release;
+			if ( version_compare( $this->release, $oldRelease, 'le' ) ) {
+				Jerror::raiseWarning(null, 'Incorrect version sequence. Cannot upgrade ' . $rel);
+				return false;
+			}
+		}
+		else { $rel = $this->release; }
+		
 		if($type === 'install')
         	{
-			//check joomla version --- compatibility
-
-			//check check php version for compatibility
-
-			//check database version compatibility
-
 			//check if component <component name here> is installed and enabled
 			if (!JComponentHelper::getComponent('com_phocadownload', true)->enabled)
 			{
