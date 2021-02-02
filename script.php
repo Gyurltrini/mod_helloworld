@@ -50,19 +50,22 @@ class mod_helloWorldInstallerScript
 	function preflight($type, $parent) 
 	{
 		echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
-		//check joomla version --- compatibility
-		
-		//check check php version for compatibility
-		
-		//check database version compatibility
-		
-		//check if component <component name here> is installed and enabled
-		if (!JComponentHelper::getComponent('com_phocadownload', true)->enabled)
-		{
-			echo 'the phocadownload component is not installed and enabled';
-			//stop process and output error
-		}else{
-			echo 'the phocadownload component is installed and enabled';
+		if($type === 'install')
+        	{
+			//check joomla version --- compatibility
+
+			//check check php version for compatibility
+
+			//check database version compatibility
+
+			//check if component <component name here> is installed and enabled
+			if (!JComponentHelper::getComponent('com_phocadownload', true)->enabled)
+			{
+				echo 'the phocadownload component is not installed and enabled';
+				//stop process and output error
+			}else{
+				echo 'the phocadownload component is installed and enabled';
+			}
 		}
 	}
 
