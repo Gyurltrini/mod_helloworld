@@ -47,7 +47,7 @@ class mod_helloWorldInstallerScript
 	 *
 	 * @return void
 	 */
-	protected $minimumPHPVersion = '5.3.3';
+	protected $minimumPHPVersion = '5.0.0';
 	function preflight($type, $parent) 
 	{
 		$jversion = new JVersion();
@@ -55,7 +55,7 @@ class mod_helloWorldInstallerScript
 		//installing manifest file version
 		$this->release = $parent->get("manifest")->version;
 		
-			// Check the minimum PHP version
+		// Check the minimum PHP version
 		if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge'))
 		{
 			$msg = "<p>You need PHP $this->minimumPHPVersion or later to install this package</p>";
