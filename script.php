@@ -47,12 +47,22 @@ class mod_helloWorldInstallerScript
 	 *
 	 * @return void
 	 */
+	protected $minimumPHPVersion = '5.3.3';
 	function preflight($type, $parent) 
 	{
 		$jversion = new JVersion();
 		echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
 		//installing manifest file version
 		$this->release = $parent->get("manifest")->version;
+		
+			// Check the minimum PHP version
+		if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge'))
+		{
+			$msg = "<p>You need PHP $this->minimumPHPVersion or later to install this package</p>";
+			JLog::add($msg, JLog::WARNING, 'jerror');
+
+			return false;
+		}
 		
 		//compare manifest file minimum Joomla version
 		$this->minimum_joomla_release = $parent->get( "manifest" )->attributes()->version;
