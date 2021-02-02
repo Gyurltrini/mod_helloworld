@@ -97,6 +97,9 @@ class mod_helloWorldInstallerScript
 			{
 				echo 'the phocadownload component is either not installed or not enabled';
 				//stop process and output error
+				
+				
+				
 			}else{
 				echo 'the phocadownload component is installed and enabled';
 			}
