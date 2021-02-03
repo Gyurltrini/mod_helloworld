@@ -95,7 +95,8 @@ class mod_helloWorldInstallerScript
 			//check if component <component name here> is installed and enabled
 			if (!JComponentHelper::getComponent('com_phocadownload', true)->enabled)
 			{
-				echo 'cannot install or update the module because the phocadownload component is either not installed or not enabled';
+				//echo 'cannot install or update the module because the phocadownload component is either not installed or not enabled';
+				Jerror::raiseWarning(null, 'cannot install or update the module because the phocadownload component is either not installed or not enabled');
 				//stop process and output error
 				return false;
 				
