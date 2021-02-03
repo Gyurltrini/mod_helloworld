@@ -81,12 +81,13 @@ class mod_helloWorldInstallerScript
 		
 		//abort if the module version is not newer
 		if ( $type == 'update' ) {
-			$oldRelease = $this->getParam('version');
+/*			$oldRelease = $this->getParam('version');
 			$rel = $oldRelease . ' to ' . $this->release;
 			if ( version_compare( $this->release, $oldRelease, 'le' ) ) {
 				Jerror::raiseWarning(null, 'Incorrect version sequence. Cannot upgrade ' . $rel);
 				return false;
-			}
+			}*/
+			echo 'type is '.$type;
 		}
 		else { $rel = $this->release; }
 		
