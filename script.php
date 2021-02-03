@@ -68,16 +68,16 @@ class mod_helloWorldInstallerScript
 		$this->minimum_joomla_release = $parent->get( "manifest" )->attributes()->version;
 		
 		//show essential information
-		/*echo '<p>'.$type.'ing module manifest file version = ' . $this->release;
+		echo '<p>'.$type.'ing module manifest file version = ' . $this->release;
 		echo '<br />Current manifest cache module version = ' . $this->getParam('version');
 		echo '<br />'.$type.'ing module manifest file minimum Joomla version = ' . $this->minimum_joomla_release;
-		echo '<br />Current Joomla version = ' . $jversion->getShortVersion();*/
+		echo '<br />Current Joomla version = ' . $jversion->getShortVersion();
 		
 		//abort if the current Joomla version is older
-		/*if( version_compare( $jversion->getShortVersion(), $this->minimum_joomla_release, 'lt' ) ) {
+		if( version_compare( $jversion->getShortVersion(), $this->minimum_joomla_release, 'lt' ) ) {
 			Jerror::raiseWarning(null, 'Cannot install com_democompupdate in a Joomla release prior to '.$this->minimum_joomla_release);
 			return false;
-		}*/
+		}
 		
 		//abort if the module version is not newer
 		if ( $type == 'update' ) {
