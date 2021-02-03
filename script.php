@@ -47,11 +47,11 @@ class mod_helloWorldInstallerScript
 	 *
 	 * @return void
 	 */
-	protected $minimumPHPVersion = '5.0.0';
+	protected $minimumPHPVersion = '4.0.0';
 	function preflight($type, $parent) 
 	{
 		$jversion = new JVersion();
-		echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
+		//echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
 		//installing manifest file version
 		$this->release = $parent->get("manifest")->version;
 		
@@ -87,7 +87,7 @@ class mod_helloWorldInstallerScript
 				Jerror::raiseWarning(null, 'Incorrect version sequence. Cannot upgrade ' . $rel);
 				return false;
 			}
-			echo 'type is '.$type;
+			//echo 'type is '.$type;
 		}
 		else { $rel = $this->release; }
 		
@@ -103,7 +103,7 @@ class mod_helloWorldInstallerScript
 				
 				
 			}else{
-				echo 'the phocadownload component is installed and enabled, so we can proceed to install / update the module';
+				//echo 'the phocadownload component is installed and enabled, so we can proceed to install / update the module';
 			}
 		}
 	}
@@ -117,7 +117,7 @@ class mod_helloWorldInstallerScript
 	 */
 	function postflight($type, $parent) 
 	{
-		echo '<p>Anything here happens after the installation/update/uninstallation of the module.</p>';
+		//echo '<p>Anything here happens after the installation/update/uninstallation of the module.</p>';
 	}
 	/*
 	 * get a variable from the manifest file (actually, from the manifest cache).
