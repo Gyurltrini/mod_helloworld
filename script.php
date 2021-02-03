@@ -97,7 +97,7 @@ class mod_helloWorldInstallerScript
 			{
 				echo 'cannot install or update the module because the phocadownload component is either not installed or not enabled';
 				//stop process and output error
-				
+				return false;
 				
 				
 			}else{
