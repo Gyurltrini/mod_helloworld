@@ -56,13 +56,13 @@ class mod_helloWorldInstallerScript
 		$this->release = $parent->get("manifest")->version;
 		
 		// Check the minimum PHP version
-		/*if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge'))
+		if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge'))
 		{
 			$msg = "<p>You need PHP $this->minimumPHPVersion or later to install this package</p>";
 			JLog::add($msg, JLog::WARNING, 'jerror');
 
 			return false;
-		}*/
+		}
 		
 		//compare manifest file minimum Joomla version
 		$this->minimum_joomla_release = $parent->get( "manifest" )->attributes()->version;
