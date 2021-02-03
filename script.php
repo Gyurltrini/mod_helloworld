@@ -80,7 +80,7 @@ class mod_helloWorldInstallerScript
 		}*/
 		
 		//abort if the module version is not newer
-		/*if ( $type == 'update' ) {
+		if ( $type == 'update' ) {
 			$oldRelease = $this->getParam('version');
 			$rel = $oldRelease . ' to ' . $this->release;
 			if ( version_compare( $this->release, $oldRelease, 'le' ) ) {
@@ -88,7 +88,7 @@ class mod_helloWorldInstallerScript
 				return false;
 			}
 		}
-		else { $rel = $this->release; }*/
+		else { $rel = $this->release; }
 		
 		if($type === 'install')
         	{
