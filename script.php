@@ -50,37 +50,37 @@ class mod_helloWorldInstallerScript
 	protected $minimumPHPVersion = '5.0.0';
 	function preflight($type, $parent) 
 	{
-		$jversion = new JVersion();
+		//$jversion = new JVersion();
 		echo '<p>Anything here happens before the installation/update/uninstallation of the module.</p>';
 		//installing manifest file version
-		$this->release = $parent->get("manifest")->version;
+		//$this->release = $parent->get("manifest")->version;
 		
 		// Check the minimum PHP version
-		if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge'))
+		/*if (!version_compare(PHP_VERSION, $this->minimumPHPVersion, 'ge'))
 		{
 			$msg = "<p>You need PHP $this->minimumPHPVersion or later to install this package</p>";
 			JLog::add($msg, JLog::WARNING, 'jerror');
 
 			return false;
-		}
+		}*/
 		
 		//compare manifest file minimum Joomla version
-		$this->minimum_joomla_release = $parent->get( "manifest" )->attributes()->version;
+		//$this->minimum_joomla_release = $parent->get( "manifest" )->attributes()->version;
 		
 		//show essential information
-		echo '<p>'.$type.'ing module manifest file version = ' . $this->release;
+		/*echo '<p>'.$type.'ing module manifest file version = ' . $this->release;
 		echo '<br />Current manifest cache module version = ' . $this->getParam('version');
 		echo '<br />'.$type.'ing module manifest file minimum Joomla version = ' . $this->minimum_joomla_release;
-		echo '<br />Current Joomla version = ' . $jversion->getShortVersion();
+		echo '<br />Current Joomla version = ' . $jversion->getShortVersion();*/
 		
 		//abort if the current Joomla version is older
-		if( version_compare( $jversion->getShortVersion(), $this->minimum_joomla_release, 'lt' ) ) {
+		/*if( version_compare( $jversion->getShortVersion(), $this->minimum_joomla_release, 'lt' ) ) {
 			Jerror::raiseWarning(null, 'Cannot install com_democompupdate in a Joomla release prior to '.$this->minimum_joomla_release);
 			return false;
-		}
+		}*/
 		
 		//abort if the module version is not newer
-		if ( $type == 'update' ) {
+		/*if ( $type == 'update' ) {
 			$oldRelease = $this->getParam('version');
 			$rel = $oldRelease . ' to ' . $this->release;
 			if ( version_compare( $this->release, $oldRelease, 'le' ) ) {
@@ -88,7 +88,7 @@ class mod_helloWorldInstallerScript
 				return false;
 			}
 		}
-		else { $rel = $this->release; }
+		else { $rel = $this->release; }*/
 		
 		if($type === 'install')
         	{
