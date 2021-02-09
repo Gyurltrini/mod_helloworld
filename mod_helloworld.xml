@@ -5,7 +5,7 @@
 	client="site"
 	method="upgrade">
 	<name>MOD_HELLOWORLD</name>
-	<version>1.0.4.5.3</version>
+	<version>1.0.4.5.4</version>
 	<creationDate>15-01-2021</creationDate><!-- dd-mm-yyy -->
 	<author>Kathryn Anderson</author>
 	<authorUrl>http://kathrynanderson.great-site.net/</authorUrl>
